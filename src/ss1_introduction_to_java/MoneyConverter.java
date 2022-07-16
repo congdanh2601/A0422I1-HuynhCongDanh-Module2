@@ -2,7 +2,7 @@ package ss1_introduction_to_java;
 
 import java.util.Scanner;
 
-public class MoneyConvertor {
+public class MoneyConverter {
     public static void main(String[] args) {
         int rate = 23000;
         Scanner scanner = new Scanner(System.in);
