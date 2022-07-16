@@ -2,7 +2,7 @@ package ss3_array_and_method;
 
 import java.util.Scanner;
 
-public class BiggestElement {
+public class SmallestValue {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -21,20 +21,16 @@ public class BiggestElement {
             }
         }
 
-        int max = array[0][0];
-        int positionX = 0;
-        int positionY = 0;
+        int min = array[0][0];
 
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
-                if (array[i][j] > max) {
-                    max = array[i][j];
-                    positionX = i;
-                    positionY = j;
+                if (array[i][j] < min) {
+                    min = array[i][j];
                 }
             }
         }
 
-        System.out.printf("\nBiggest element is %d at index %d.%d", max, positionX,positionY);
+        System.out.printf("\nSmallest element is %d", min);
     }
 }
