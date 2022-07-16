@@ -6,29 +6,22 @@ public class SmallestValue {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Height of the 2D array: ");
-        int x = scanner.nextInt();
+        System.out.print("SIZE of the array: ");
+        int size = scanner.nextInt();
 
-        System.out.print("Width of the 2D array: ");
-        int y = scanner.nextInt();
+        int[] array = new int[size];
 
-        int[][] array = new int[x][y];
-
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                System.out.printf("Type element index %d.%d: ", i, j);
-                array[i][j] = scanner.nextInt();
-            }
+        for (int i = 0; i < size; i++) {
+                System.out.printf("Type element index %d: ", i);
+                array[i] = scanner.nextInt();
         }
 
-        int min = array[0][0];
+        int min = array[0];
 
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                if (array[i][j] < min) {
-                    min = array[i][j];
+        for (int i = 0; i < size; i++) {
+                if (array[i] < min) {
+                    min = array[i];
                 }
-            }
         }
 
         System.out.printf("\nSmallest element is %d", min);
