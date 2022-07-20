@@ -1,7 +1,10 @@
 public class Test {
+    static public int X = 2;
+
     public static void main(String[] args) {
-        int a = 19;
-        double b = a / 10 % 10;
-        System.out.println(b);
+        Test o1 = new Test();
+        Test o2 = new Test();
+        o2.X = 5;
+        System.out.printf("x=%d, y=%d, z=%d", o1.X, o2.X, Test.X);
     }
 }
