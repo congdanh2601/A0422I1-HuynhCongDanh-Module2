@@ -54,7 +54,7 @@ public class Fan {
         this.color = color;
     }
 
-    Fan() {};
+    Fan() {}
 
     public String toString() {
         if (isOn()) {

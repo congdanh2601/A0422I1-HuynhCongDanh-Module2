@@ -6,5 +6,7 @@ public class Test {
         Test o2 = new Test();
         o2.X = 5;
         System.out.printf("x=%d, y=%d, z=%d", o1.X, o2.X, Test.X);
+
+
     }
 }
