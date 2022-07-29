@@ -86,9 +86,9 @@ public class NumberToText {
     }
 
     public static void readNumberSmallerThan100(int number) {
-        int hangChuc = number / 10 % 10;
-        int hangDonVi = number % 10;
-        switch (hangChuc) {
+        int tens = number / 10 % 10;
+        int ones = number % 10;
+        switch (tens) {
             case 2:
                 System.out.print("twenty");
                 break;
@@ -114,18 +114,18 @@ public class NumberToText {
                 System.out.print("ninety");
                 break;
         }
-        if (hangDonVi != 0) {
+        if (ones != 0) {
             System.out.print("-");
-            readNumberSmallerThan20(hangDonVi);
+            readNumberSmallerThan20(ones);
         }
     }
 
     public static void readNumberSmallerThan1000(int number) {
-        int hangTram = number / 100 % 10;
-        int hangChuc = number / 10 % 10;
-        int hangDonVi = number % 10;
+        int hundreds = number / 100 % 10;
+        int tens = number / 10 % 10;
+        int ones = number % 10;
 
-        switch (hangTram) {
+        switch (hundreds) {
             case 1:
                 System.out.print("one hundred");
                 break;
@@ -154,15 +154,15 @@ public class NumberToText {
                 System.out.print("nine hundred");
                 break;
         }
-        if (hangChuc == 1) {
+        if (tens == 1) {
             System.out.print(" and ");
-            readNumberSmallerThan20(number - (hangTram * 100));
-        } else if (hangChuc != 0) {
+            readNumberSmallerThan20(number - (hundreds * 100));
+        } else if (tens != 0) {
             System.out.print(" and ");
-            readNumberSmallerThan100(number - (hangTram * 100));
-        } else if (hangDonVi != 0) {
+            readNumberSmallerThan100(number - (hundreds * 100));
+        } else if (ones != 0) {
             System.out.print(" and ");
-            readNumberSmallerThan20(number - (hangTram * 100));
+            readNumberSmallerThan20(number - (hundreds * 100));
         }
     }
 }
