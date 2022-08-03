@@ -1,12 +1,3 @@
 public class Test {
-    public int X = 2;
 
-    public static void main(String[] args) {
-        Test o1 = new Test();
-        Test o2 = new Test();
-        o2.X = 5;
-        System.out.println();
-
-
-    }
 }
