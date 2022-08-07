@@ -1,4 +1,4 @@
-package ss8_cleancode_refactoring.rename_variable_extract_constant;
+package ss8_cleancode_refactoring.practice1_apj_calculator;
 
 public class Calculator {
 

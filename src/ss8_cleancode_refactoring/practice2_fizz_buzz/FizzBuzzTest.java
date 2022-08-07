@@ -1,4 +1,4 @@
-package ss8_cleancode_refactoring.extract_variable;
+package ss8_cleancode_refactoring.practice2_fizz_buzz;
 
 import org.junit.jupiter.api.Test;
 

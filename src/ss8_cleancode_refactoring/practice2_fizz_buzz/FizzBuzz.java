@@ -1,4 +1,4 @@
-package ss8_cleancode_refactoring.extract_variable;
+package ss8_cleancode_refactoring.practice2_fizz_buzz;
 
 public class FizzBuzz {
     public static String fizzBuzz(int number){

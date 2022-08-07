@@ -18,7 +18,7 @@ public class MyLinkedList {
     private int numNodes = 0;
 
     public MyLinkedList(Object data) {
-        Node head = new Node(data);
+        head = new Node(data);
     }
 
     public void add(int index, Object data) {
