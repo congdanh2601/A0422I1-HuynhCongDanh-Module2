@@ -1,12 +1,12 @@
 package ss8_cleancode_refactoring.exercise_tennis_game;
 
 public class TennisGame {
-    public static String getScore(String player1Name, String player2Name, int Player1Score, int Player2Score) {
+    public static String getScore(String player1Name, String player2Name, int player1Score, int player2Score) {
         String score = "";
         int tempScore=0;
-        if (Player1Score==Player2Score)
+        if (player1Score==player2Score)
         {
-            switch (Player1Score)
+            switch (player1Score)
             {
                 case 0:
                     score = "Love-All";
@@ -26,9 +26,9 @@ public class TennisGame {
 
             }
         }
-        else if (Player1Score>=4 || Player2Score>=4)
+        else if (player1Score>=4 || player2Score>=4)
         {
-            int minusResult = Player1Score-Player2Score;
+            int minusResult = player1Score-player2Score;
             if (minusResult==1) score ="Advantage player1";
             else if (minusResult ==-1) score ="Advantage player2";
             else if (minusResult>=2) score = "Win for player1";
@@ -38,8 +38,8 @@ public class TennisGame {
         {
             for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = Player1Score;
-                else { score+="-"; tempScore = Player2Score;}
+                if (i==1) tempScore = player1Score;
+                else { score+="-"; tempScore = player2Score;}
                 switch(tempScore)
                 {
                     case 0:
