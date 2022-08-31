@@ -1,3 +1,5 @@
+package test;
+
 public class MyStack<E> {
     private static final int INITIAL_SIZE = 16;
     private E[] elements;
