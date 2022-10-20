@@ -1,9 +1,12 @@
 package case_study.models;
 
+import java.util.Date;
+import java.util.Objects;
+
 public class Booking {
     private int bookingCode;
-    private String checkInDay;
-    private String checkOutDay;
+    private Date checkInDay;
+    private Date checkOutDay;
     private int customerId;
     private String serviceName;
     private String serviceType;
@@ -11,7 +14,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int bookingCode, String checkInDay, String checkOutDay, int customerId, String serviceName, String serviceType) {
+    public Booking(int bookingCode, Date checkInDay, Date checkOutDay, int customerId, String serviceName, String serviceType) {
         this.bookingCode = bookingCode;
         this.checkInDay = checkInDay;
         this.checkOutDay = checkOutDay;
@@ -24,11 +27,11 @@ public class Booking {
         return bookingCode;
     }
 
-    public String getCheckInDay() {
+    public Date getCheckInDay() {
         return checkInDay;
     }
 
-    public String getCheckOutDay() {
+    public Date getCheckOutDay() {
         return checkOutDay;
     }
 
@@ -48,11 +51,11 @@ public class Booking {
         this.bookingCode = bookingCode;
     }
 
-    public void setCheckInDay(String checkInDay) {
+    public void setCheckInDay(Date checkInDay) {
         this.checkInDay = checkInDay;
     }
 
-    public void setCheckOutDay(String checkOutDay) {
+    public void setCheckOutDay(Date checkOutDay) {
         this.checkOutDay = checkOutDay;
     }
 
@@ -66,5 +69,32 @@ public class Booking {
 
     public void setServiceType(String serviceType) {
         this.serviceType = serviceType;
+    }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "bookingCode=" + bookingCode +
+                ", checkInDay='" + '\'' + checkInDay.getDate() + '/' +  (checkInDay.getMonth() + 1) + '/' + (checkInDay.getYear() + 1900) + '\'' +
+                ", checkOutDay='" + '\'' + checkOutDay.getDate() + '/' +  (checkOutDay.getMonth() + 1) + '/' + (checkOutDay.getYear() + 1900) + '\'' +
+                ", customerId=" + customerId +
+                ", serviceName='" + serviceName + '\'' +
+                ", serviceType='" + serviceType + '\'' +
+                '}';
+    }
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return bookingCode == booking.bookingCode && customerId == booking.customerId && checkInDay.equals(booking.checkInDay) && checkOutDay.equals(booking.checkOutDay) && serviceName.equals(booking.serviceName) && serviceType.equals(booking.serviceType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookingCode, checkInDay, checkOutDay, customerId, serviceName, serviceType);
     }
 }

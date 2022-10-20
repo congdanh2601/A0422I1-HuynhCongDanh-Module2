@@ -10,19 +10,22 @@ public class ProductManager {
         productList = new ArrayList<>();
     }
 
-    public int addProduct(Product product) {
-        productList.add(product);
+    public int addProduct(int id, String name, int price) {
+        Product p = new Product(id, name, price);
+        productList.add(p);
         return productList.size();
     }
 
     public void editProduct(int id, String name) {
-
-
-
+        for (Product p : productList) {
+            if (p.getId() == id) {
+                p.setName(name);
+            }
+        }
     }
 
-    public void remove(int id) {
-
+    public void removeById(int id) {
+        productList.removeIf(p -> p.getId() == id);
     }
 
 
